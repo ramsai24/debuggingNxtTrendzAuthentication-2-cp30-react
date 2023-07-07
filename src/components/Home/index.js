@@ -6,6 +6,7 @@ import Header from '../Header'
 import './index.css'
 
 const Home = () => {
+  const accessToken = Cookies.get('jwt_token')
   if (accessToken === undefined) {
     return <Redirect to="/login" />
   }
@@ -19,6 +20,7 @@ const Home = () => {
           <img
             src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-img.png"
             className="home-mobile-img"
+            alt="img"
           />
           <p className="home-description">
             Fashion is part of the daily air and it does not quite help that it
